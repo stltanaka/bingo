@@ -19,6 +19,7 @@ body {
 	width: 360px;
 	height: 360px;
 	top: -48px;
+	margin: auto;
 }
 
 .bubble1 {
@@ -68,7 +69,7 @@ p {
 
 .palettecolors {
 	display: inline;
-	margin: 150px auto;
+	margin: 10px auto;
 	background-color: #912d82;
 	width: 90vw;
 	height: 45vw;
