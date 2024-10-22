@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-	background-color: #912d82;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -17,16 +16,27 @@ body {
 }
 
 .topcontainer {
-	background-color: #912d82;
 	position: relative;
 	top: -48px;
 	border-radius: 15px;
 }
 
+.bubble1 {
+	background-color: #912d82;
+	width: 360px;
+	height: 360px;
+}
+
+.bubble2 {
+	background-color: #912d82;
+	width: 360px;
+	height: 360px;
+}
+
 p {
 	width: 100%;
 	text-align: center;
-	font-size: 62px;
+	font-size: 45px;
 }
 
 .basetext {
