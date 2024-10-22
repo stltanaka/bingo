@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #912d82;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,19 +9,27 @@ body {
 }
 
 .pallet1 {
-    background-color: #f4f4f4;
+    background-color: #af4b9e;
 }
 
 .pallet2 {
-    background-color: #f4f4f4;
+    background-color: #af4b6c;
 }
 
 .pallet3 {
-    background-color: #f4f4f4;
+    background-color: #af5c4b;
 }
 
 .pallet4 {
-    background-color: #f4f4f4;
+    background-color: #e4cae0;
+}
+
+.pallet4 {
+    background-color: #ba7cb1;
+}
+
+.pallet4 {
+    background-color: #df00df;
 }
 
 .container {
