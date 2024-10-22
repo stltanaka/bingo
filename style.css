@@ -8,6 +8,22 @@ body {
     margin: 0;
 }
 
+.pallet1 {
+    background-color: #f4f4f4;
+}
+
+.pallet2 {
+    background-color: #f4f4f4;
+}
+
+.pallet3 {
+    background-color: #f4f4f4;
+}
+
+.pallet4 {
+    background-color: #f4f4f4;
+}
+
 .container {
     text-align: center;
 }
