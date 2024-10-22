@@ -27,12 +27,6 @@ body {
 	height: 360px;
 }
 
-.bubble2 {
-	background-color: #912d82;
-	width: 360px;
-	height: 360px;
-}
-
 p {
 	width: 100%;
 	text-align: center;
@@ -74,7 +68,11 @@ p {
 .palettecolors {
 	display: inline;
 	margin: 150px;
+	background-color: #912d82;
+	width: 360px;
+	height: 360px;
 }
+
 
 .paletteset1 {
 	display: flex;
