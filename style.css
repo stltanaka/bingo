@@ -27,33 +27,33 @@ p {
 .basetext {
 	position: absolute;
 	top: 8px;
-	color: #af5c4b;
-	text-stroke: 0px #af4b9e;
-	-webkit-text-stroke: 0px #af4b9e;
+	color: #007;
+	text-stroke: 1.7px #700070;
+	-webkit-text-stroke: 1.7px #700070;
 }
 
 .stroke1 {
 	position: absolute;
-	top: 11px;
-	color: black;
-	text-stroke: 0px #af4b9e;
-	-webkit-text-stroke: 0px #af4b9e;
+	top: 12px;
+	color: #00769b;
+	text-stroke: 1.7px #700070;
+	-webkit-text-stroke: 1.7px #700070;
 }
 
 .stroke2 {
 	position: absolute;
-	top: 14px;
-	color: blue;
-	text-stroke: 0px #af4b9e;
-	-webkit-text-stroke: 0px #af4b9e;
+	top: 15px;
+	color: #00769b;
+	text-stroke: 1.7px #700070;
+	-webkit-text-stroke: 1.7px #700070;
 }
 
 .stroke3 {
 	position: absolute;
-	top: 16px;
-	color: blue;
-	text-stroke: 9px #af4b9e;
-	-webkit-text-stroke: 9px #af4b9e;
+	top: 17px;
+	color: #700070;
+	text-stroke: 6px #700070;
+	-webkit-text-stroke: 6px #700070;
 }
 
 .palettecolors {
