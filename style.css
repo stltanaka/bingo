@@ -8,7 +8,9 @@ body {
     margin: 0;
 }
 
-.pallet1 {
+.palettecolors
+
+.palette1 {
     background-color: #af4b9e;
     width: 150px;
     height: 150px;
@@ -16,7 +18,7 @@ body {
     margin: 10px;
 }
 
-.pallet2 {
+.palette2 {
     background-color: #af4b6c;
     width: 150px;
     height: 150px;
@@ -24,7 +26,7 @@ body {
     margin: 10px;
 }
 
-.pallet3 {
+.palette3 {
     background-color: #af5c4b;
     width: 150px;
     height: 150px;
@@ -32,7 +34,7 @@ body {
     margin: 10px;
 }
 
-.pallet4 {
+.palette4 {
     background-color: #e4cae0;
     width: 150px;
     height: 150px;
@@ -40,7 +42,7 @@ body {
     margin: 10px;
 }
 
-.pallet5 {
+.palette5 {
     background-color: #ba7cb1;
     width: 150px;
     height: 150px;
@@ -48,7 +50,7 @@ body {
     margin: 10px;
 }
 
-.pallet6 {
+.palette6 {
     background-color: #df00df;
     width: 150px;
     height: 150px;
