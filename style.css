@@ -9,6 +9,14 @@ body {
 }
 
 .palettecolors {
+    display: inline;
+}
+
+.paletteset1 {
+    display: flex;
+}
+
+.paletteset2 {
     display: flex;
 }
 
@@ -53,6 +61,54 @@ body {
 }
 
 .palette6 {
+    background-color: #df00df;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette21 {
+    background-color: #af4b9e;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette22 {
+    background-color: #af4b6c;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette23 {
+    background-color: #af5c4b;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette24 {
+    background-color: #e4cae0;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette25 {
+    background-color: #ba7cb1;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.palette26 {
     background-color: #df00df;
     width: 150px;
     height: 150px;
