@@ -70,8 +70,9 @@ p {
 	display: inline;
 	margin: 150px auto;
 	background-color: #912d82;
-	width: 360px;
-	height: 360px;
+	width: 90vw;
+	height: 45vw;
+	align-content: center;
 	border-radius: 15px;
 }
 
