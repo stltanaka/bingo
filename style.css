@@ -5,7 +5,7 @@ body {
 	align-items: center;
 	text-align: center;
 	height: 100vh;
-	margin: 0;
+	margin: auto;
 }
 
 .container {
@@ -68,7 +68,7 @@ p {
 
 .palettecolors {
 	display: inline;
-	margin: 150px;
+	margin: 150px auto;
 	background-color: #912d82;
 	width: 360px;
 	height: 360px;
@@ -93,7 +93,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette2 {
@@ -101,7 +101,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette3 {
@@ -109,7 +109,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette4 {
@@ -117,7 +117,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette5 {
@@ -125,7 +125,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette6 {
@@ -133,7 +133,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette21 {
@@ -141,7 +141,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette22 {
@@ -149,7 +149,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette23 {
@@ -157,7 +157,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette24 {
@@ -165,7 +165,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette25 {
@@ -173,7 +173,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette26 {
@@ -181,7 +181,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette31 {
@@ -189,7 +189,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette32 {
@@ -197,7 +197,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette33 {
@@ -205,7 +205,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette34 {
@@ -213,7 +213,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette35 {
@@ -221,7 +221,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .palette36 {
@@ -229,7 +229,7 @@ p {
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .bingo-board {
