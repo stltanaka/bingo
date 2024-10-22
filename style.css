@@ -40,31 +40,31 @@ p {
 .basetext {
 	position: absolute;
 	top: 8px;
-	color: #007;
-	text-stroke: 1.7px #700070;
-	-webkit-text-stroke: 1.7px #700070;
+	color: #af4b6c;
+	text-stroke: 1.7px #007;
+	-webkit-text-stroke: 1.7px #007;
 }
 
 .stroke1 {
 	position: absolute;
 	top: 12px;
-	color: #00769b;
-	text-stroke: 1.3px #700070;
-	-webkit-text-stroke: 1.3px #700070;
+	color: #700000;
+	text-stroke: 1.7px #007;
+	-webkit-text-stroke: 1.7px #007;
 }
 
 .stroke2 {
 	position: absolute;
 	top: 15px;
-	color: #00769b;
+	color: #700000;
 }
 
 .stroke3 {
 	position: absolute;
 	top: 17px;
-	color: #700070;
-	text-stroke: 6px #700070;
-	-webkit-text-stroke: 6px #700070;
+	color: #007;
+	text-stroke: 6px #007;
+	-webkit-text-stroke: 6px #007;
 }
 
 .stroke4 {
