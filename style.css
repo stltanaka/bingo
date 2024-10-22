@@ -1,6 +1,6 @@
 body {
 	font-family: 'cooper-black-std', serif;
-	background-color: #004d40;
+	background-color: #40004d;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -97,7 +97,7 @@ p {
 }
 
 .palette2 {
-	background-color: #af4b9e;
+	background-color: #40004d;
 	width: 150px;
 	height: 150px;
 	border-radius: 15px;
