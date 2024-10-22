@@ -16,6 +16,7 @@ body {
 
 .topcontainer {
 	position: relative;
+	top: -48px;
 }
 
 p {
