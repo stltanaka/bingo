@@ -1,7 +1,7 @@
 body {
     font-family: 'Trebuchet MS', sans-serif;
     background-color: #912d82;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -69,7 +69,7 @@ body {
 }
 
 .bingo-board {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(5, 100px);
     grid-template-rows: repeat(5, 100px);
     gap: 5px;
