@@ -12,19 +12,18 @@ body {
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	border-radius: 15px;
 }
 
 .topcontainer {
 	position: relative;
 	top: -48px;
-	border-radius: 15px;
 }
 
 .bubble1 {
 	background-color: #912d82;
 	width: 360px;
 	height: 360px;
+	border-radius: 15px;
 }
 
 p {
@@ -71,6 +70,7 @@ p {
 	background-color: #912d82;
 	width: 360px;
 	height: 360px;
+	border-radius: 15px;
 }
 
 
