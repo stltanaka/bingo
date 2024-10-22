@@ -17,18 +17,18 @@ body {
 .topcontainer {
 	position: relative;
 	width: 360px;
-	height: 360px;
-	top: -48px;
+	height: 215px;
+	top: -35px;
 	margin: auto;
 }
 
 .bubble1 {
 	background-color: #912d82;
-	width: 360px;
-  	height: 142px;
+	width: 344px;
+  	height: 144px;
   	border-radius: 15px;
   	position: relative;
-  	top: 82.3px;
+  	top: 80.3px;
 }
 
 p {
