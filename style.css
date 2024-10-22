@@ -165,6 +165,54 @@ p {
 	margin: 10px;
 }
 
+.palette31 {
+	background-color: #f4f0f5;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.palette32 {
+	background-color: #e1a3c5;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.palette33 {
+	background-color: #007;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.palette34 {
+	background-color: #0079;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.palette35 {
+	background-color: #ba7cb1;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.palette36 {
+	background-color: #df00df;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	margin: 10px;
+}
+
 .bingo-board {
 	display: none;
 	grid-template-columns: repeat(5, 100px);
