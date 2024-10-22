@@ -1,6 +1,6 @@
 body {
 	font-family: 'cooper-black-std', serif;
-	background-color: #40004d;
+	background-color: #280032;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -100,7 +100,7 @@ p {
 }
 
 .palette1 {
-	background-color: #af4b9e;
+	background-color: #280032;
 	width: 11vw;
 	height: 11vw;
 	border-radius: 15px;
