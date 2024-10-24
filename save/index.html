@@ -163,6 +163,7 @@
 	document.addEventListener("DOMContentLoaded", generateBingoCard);
 	document.getElementById('generate-button').addEventListener('click', generateBingoCard);
 	document.getElementById('save-button').addEventListener('click', saveBingoBoard);
+	document.getElementById('load-button').addEventListener('click', loadBingoBoard);
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbz21OPH5WfDIqepN-6LbUkgh6Qp9E8pKtX_q5T0zboTktI9szVsg0UCQwulAr-0SOc8DA/exec';
 	
 	function generateBingoCard() {
@@ -217,7 +218,32 @@
 	        .catch(error => console.error('Error saving data:', error));
 	}
 
+	function loadBingoBoard() {
+	    document.getElementById('statusMessage').style.visibility = 'visible';
+	    const bingoBoard = document.getElementById('bingo-board');
+	    bingoBoard.innerHTML = '';
 	
+	    fetch(`${scriptURL}?load=true`)
+	        .then(response => response.json())
+	        .then(data => {
+	            const { words, statuses } = data;
+	
+	            words.forEach((word, index) => {
+	                const cell = document.createElement('div');
+	                cell.className = 'bingo-cell';
+	                cell.textContent = word;
+	                if (statuses[index] === 'Checked') {
+	                    cell.classList.add('checked');
+	                }
+	                cell.addEventListener('click', () => cell.classList.toggle('checked'));
+	                bingoBoard.appendChild(cell);
+	            });
+	        })
+	        .catch(error => console.error('Error loading data:', error))
+	        .finally(() => {
+	            document.getElementById('statusMessage').style.visibility = 'hidden';
+	        });
+	}
     </script>
 </body>
 </html>
