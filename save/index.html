@@ -5,45 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bingo Card Generator</title>
     <style>
-        #bingo-board {
-	        display: grid;
-	        grid-template-columns: repeat(5, 10vw);
-	        grid-template-rows: repeat(5, 10vw);
-	        margin: 20px auto;
-	        background-color: #912d82;
-  	        border-radius: 1vw;
-  	        padding: 0.5vw;
-        }
-
-        .bingo-cell {
-	        display: flex;
-	        justify-content: center;
-	        align-items: center;
-	        background-color: #af4b9e;
-	        border-radius: 1vw;
-	        cursor: pointer;
-	        font-size: 2vw;
-  	        margin: 0.5vw;
-	        color: #007;
-        }
-
-        .bingo-cell.checked {
-	        background-color: #700000;
-	        color: #af4b6c;
-        }
-
-        .generate-button {
-	        background-color: #af4b9e;
-	        border-radius: 1vw;
-	        cursor: pointer;
-	        font-size: 1.1vw;
-	        width: 10vw;
-  	        margin: 0.5vw auto;
-	        color: #007;
-        }
-        .statusMessage {
-            visibility: hidden;
-        }
+	body {
+		font-family: 'cooper-black-std', serif;
+		background-color: #1e0a28;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100vh;
+		margin: auto;
+	}
+	
+	.container {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.topcontainer {
+		position: relative;
+		width: 360px;
+		height: 215px;
+		top: -35px;
+		margin: auto;
+	}
+	
+	.bubble1 {
+		background-color: #912d82;
+		width: 344px;
+	  	height: 144px;
+	  	border-radius: 15px;
+	  	position: relative;
+	  	top: 75.3px;
+		left: 5px;
+	}
+	
+	p {
+		width: 100%;
+		text-align: center;
+		font-size: 45px;
+	}
+	
+	.basetext {
+		position: absolute;
+		top: 8px;
+		color: #af4b6c;
+		text-stroke: 1.7px #007;
+		-webkit-text-stroke: 1.7px #007;
+	}
+	
+	.stroke1 {
+		position: absolute;
+		top: 12px;
+		color: #700000;
+		text-stroke: 1.7px #007;
+		-webkit-text-stroke: 1.7px #007;
+	}
+	
+	.stroke2 {
+		position: absolute;
+		top: 15px;
+		color: #700000;
+	}
+	
+	.stroke3 {
+		position: absolute;
+		top: 17px;
+		color: #007;
+		text-stroke: 6px #007;
+		-webkit-text-stroke: 6px #007;
+	}
+	
+	.stroke4 {
+		position: absolute;
+	  	top: 14px;
+	  	color: #912d82;
+	  	text-stroke: 20px #700070;
+	  	-webkit-text-stroke: 20px #912d82;
+	}
+	
+	.bingo-board {
+		display: grid;
+		grid-template-columns: repeat(5, 10vw);
+		grid-template-rows: repeat(5, 10vw);
+		margin: 20px auto;
+		background-color: #912d82;
+	  	border-radius: 1vw;
+	  	padding: 0.5vw;
+	}
+	
+	.bingo-cell {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #af4b9e;
+		border-radius: 1vw;
+		cursor: pointer;
+		font-size: 2vw;
+	  	margin: 0.5vw;
+		color: #007;
+	}
+	
+	.bingo-cell.checked {
+		background-color: #700000;
+		color: #af4b6c;
+	}
+	
+	.generate-button {
+		background-color: #af4b9e;
+		border-radius: 1vw;
+		cursor: pointer;
+		font-size: 1.1vw;
+		width: 10vw;
+	  	margin: 0.5vw auto;
+		color: #007;
+	}
+	.statusMessage {
+	        visibility: hidden;
+	}
     </style>
 </head>
 <body>
