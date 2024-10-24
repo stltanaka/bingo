@@ -244,7 +244,7 @@ p {
 }
 
 .bingo-board {
-	display: none;
+	display: grid;
 	grid-template-columns: repeat(5, 100px);
 	grid-template-rows: repeat(5, 100px);
 	gap: 5px;
