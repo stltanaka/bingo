@@ -4,7 +4,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUkX5xmJHLwuPUaiQpg
 
 function generateBingoCard() {
     document.getElementById('statusMessage').style.visibility = 'visible';
-    const shuffledWords = shuffleArray(words).slice(0, 25);
     const bingoBoard = document.getElementById('bingo-board');
     bingoBoard.innerHTML = '';
     fetch(scriptURL)
