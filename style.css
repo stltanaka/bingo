@@ -247,8 +247,10 @@ p {
 	display: grid;
 	grid-template-columns: repeat(5, 10vw);
 	grid-template-rows: repeat(5, 10vw);
-	gap: 5px;
 	margin: 20px auto;
+	background-color: #912d82;
+  	border-radius: 1vw;
+  	padding: 0.5vw;
 }
 
 .bingo-cell {
@@ -258,7 +260,8 @@ p {
 	background-color: #af4b9e;
 	border-radius: 1vw;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 2vw;
+  	margin: 0.5vw;
 }
 
 .bingo-cell.checked {
