@@ -279,4 +279,7 @@ p {
   	margin: 0.5vw auto;
 	color: #007;
 }
+.statusMessage {
+        visibility: hidden;
+}
 
