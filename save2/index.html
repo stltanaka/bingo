@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Site Session Example</title>
+</head>
+<body>
+    <h1>Session Example</h1>
+    <button id="startSession">Start Session</button>
+    <div id="sessionInfo"></div>
+
+    <script>
+        document.getElementById('startSession').addEventListener('click', async () => {
+            const response = await fetch('YOUR_SERVERLESS_FUNCTION_URL', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            });
+
+            const data = await response.json();
+            const sessionToken = data.sessionToken;
+
+            // Display the session token
+            document.getElementById('sessionInfo').innerText = `Session Token: ${sessionToken}`;
+
+            // Optionally store it in memory for later use
+            window.sessionToken = sessionToken;
+        });
+    </script>
+</body>
+</html>
