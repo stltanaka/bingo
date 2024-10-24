@@ -25,6 +25,7 @@
     <h1>Bingo Card</h1>
     <div id="bingo-board"></div>
     <button id="generate-button">Generate Bingo Card</button>
+    <div id="statusMessage"></div>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUkX5xmJHLwuPUaiQpgOzuQ9oSTkaTGdYuCQRlz08YzLFAo6UZsN0Ii3S_oQbG16qkg/exec'; // Replace with your Apps Script URL
@@ -33,6 +34,7 @@
         document.getElementById('generate-button').addEventListener('click', generateBingoCard);
 
         function generateBingoCard() {
+            statusMessage.innerText = data.message || 'Generating...';
             fetch(scriptURL)
                 .then(response => response.json())
                 .then(words => {
@@ -49,6 +51,7 @@
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));
+            statusMessage.innerText = data.message || 'Generated successfully!';
         }
 
         function shuffleArray(array) {
@@ -61,5 +64,3 @@
     </script>
 </body>
 </html>
-
-
