@@ -138,6 +138,7 @@
     </div>
     <div class="container">
 	<p class="generate-button" id="generate-button">Randomize Bingo Card</p>
+	<p class="generate-button" id="save-button">Save Bingo Board</p>
 	<div id="statusMessage">Please wait a moment</div>
 	<div id="bingo-board" class="bingo-board"></div>
     </div>
@@ -145,6 +146,7 @@
     <script>
 	document.addEventListener("DOMContentLoaded", generateBingoCard);
 	document.getElementById('generate-button').addEventListener('click', generateBingoCard);
+	document.getElementById('save-button').addEventListener('click', saveBingoBoard);
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUkX5xmJHLwuPUaiQpgOzuQ9oSTkaTGdYuCQRlz08YzLFAo6UZsN0Ii3S_oQbG16qkg/exec';
 	
 	function generateBingoCard() {
@@ -176,6 +178,26 @@
 	        [array[i], array[j]] = [array[j], array[i]];
 	    }
 	    return array;
+	}
+	function saveBingoBoard() {
+	    const bingoCells = document.querySelectorAll('.bingo-cell');
+	    const boardState = Array.from(bingoCells).map(cell => ({
+	        word: cell.textContent,
+	        checked: cell.classList.contains('checked')
+	    }));
+	    
+	    fetch(scriptURL, {
+	        method: 'POST',
+	        headers: {
+	            'Content-Type': 'application/json'
+	        },
+	        body: JSON.stringify(boardState)
+	    })
+	    .then(response => response.text())
+	    .then(message => {
+	        alert(message); // Show a message when data is saved
+	    })
+	    .catch(error => console.error('Error saving data:', error));
 	}
     </script>
 </body>
