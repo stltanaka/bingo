@@ -195,8 +195,8 @@
 	
 	    fetch(url)
 	        .then(response => response.text())
-	        .then(message => {
-	            alert(message); // Show a message when data is saved
+	        .then(() => {
+			document.getElementById('statusMessage').style.visibility = 'visible';
 	        })
 	        .catch(error => console.error('Error saving data:', error));
 	}
