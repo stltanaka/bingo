@@ -255,14 +255,14 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #fff;
+	background-color: #af4b9e;
 	border-radius: 1vw;
 	cursor: pointer;
 	font-size: 18px;
 }
 
 .bingo-cell.checked {
-	background-color: #4caf50;
+	background-color: #700000;
 	color: white;
 	text-decoration: line-through;
 }
