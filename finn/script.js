@@ -15,8 +15,6 @@ function generateBingoCard() {
         cell.textContent = word;
         cell.addEventListener('click', () => cell.classList.toggle('checked'));
         bingoBoard.appendChild(cell);
-    
-    setUserstate
     });
 }
 
