@@ -262,10 +262,11 @@ p {
 	cursor: pointer;
 	font-size: 2vw;
   	margin: 0.5vw;
+	color: #007;
 }
 
 .bingo-cell.checked {
 	background-color: #700000;
-	color: white;
+	color: #af4b6c;
 }
 
