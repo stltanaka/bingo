@@ -18,12 +18,6 @@ function generateBingoCard() {
     });
 }
 
-function resetGame() {
-    document.getElementById('bingo-input').value = '';
-    document.getElementById('bingo-board').innerHTML = '';
-    document.getElementById('reset-button').style.display = 'none';
-}
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
