@@ -130,6 +130,8 @@
 	}
 	.containermenu {
 		display: flex;
+		background-color: #912d82;
+	  	border-radius: 1vw;
 	}
 	.switch-container {
             position: relative;
@@ -146,8 +148,8 @@
             border-radius: 50px;
             cursor: pointer;
             display: block;
-            width: 60px;
-            height: 30px;
+            width: 30px;
+            height: 60px;
             position: relative;
             transition: background-color 0.3s;
         }
@@ -169,7 +171,7 @@
         }
 
         .switch:checked + .switch-label::before {
-            transform: translateX(30px); /* Move the switch knob */
+            transform: translateY(30px); /* Move the switch knob */
         }
     </style>
 </head>
