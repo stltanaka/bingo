@@ -36,6 +36,7 @@
         
         document.addEventListener("DOMContentLoaded", generateBingoCard);
         document.getElementById('generate-button').addEventListener('click', generateBingoCard);
+        document.getElementById('generate-button').addEventListener('click', statusMessage.style.visibility = 'visible');
 
         function generateBingoCard() {
             fetch(scriptURL)
@@ -54,6 +55,7 @@
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));
+            statusMessage.style.visibility = 'hidden'
         }
 
         function shuffleArray(array) {
