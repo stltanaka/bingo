@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Saver</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>User Session Storage</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Text Saver</h1>
-        <textarea id="textInput" placeholder="Type something..."></textarea>
-        <button id="saveButton">Save</button>
-        <button id="loadButton">Load</button>
-        <div id="message"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Store and Load Text</h1>
+    <textarea id="userInput" rows="10" cols="30"></textarea>
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+    <div id="output"></div>
+
+    <script>
+        const scriptURL = 'YOUR_APPS_SCRIPT_URL'; // Replace with your Apps Script URL
+
+        function saveData() {
+            const text = document.getElementById('userInput').value;
+            fetch(scriptURL + '?text=' + encodeURIComponent(text))
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function loadData() {
+            fetch(scriptURL)
+                .then(response => response.json())
+                .then(data => {
+                    const output = document.getElementById('output');
+                    output.innerHTML = data.join('<br>');
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
 </body>
 </html>
+
