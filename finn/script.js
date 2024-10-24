@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", generateBingoCard);
 document.getElementById('generate-button').addEventListener('click', generateBingoCard);
-document.addEventListener("DOMContentLoaded", getUserstate);
 
 function generateBingoCard() {
     const input = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25"
@@ -29,30 +28,50 @@ function shuffleArray(array) {
     return array;
 }
 
-function setUserstate(userstate) {
-    fetch('/set_userstate', {
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json());
+
+let userBingoStates = {};
+
+app.post('/save-bingo-state', (req, res) => {
+    const { userId, boardState } = req.body;
+    userBingoStates[userId] = boardState;
+    res.status(200).send('Bingo state saved');
+});
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
+
+document.getElementById('save-button').addEventListener('click', saveBingoState);
+
+function saveBingoState() {
+    const checkedCells = Array.from(document.getElementsByClassName('bingo-cell checked'));
+    const boardState = checkedCells.map(cell => cell.textContent);
+    
+    const userId = 'exampleUserId';
+
+    fetch('/save-bingo-state', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userstate })
+        body: JSON.stringify({ userId, boardState }),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
     .then(data => {
-        console.log(data.message); // Confirmation message
+        console.log(data);
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.error('There was a problem with the fetch operation:', error);
     });
 }
 
-function getUserstate() {
-    fetch('/get_userstate')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Username:', data.userstate);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-}
