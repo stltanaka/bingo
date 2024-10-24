@@ -34,8 +34,9 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUkX5xmJHLwuPUaiQpgOzuQ9oSTkaTGdYuCQRlz08YzLFAo6UZsN0Ii3S_oQbG16qkg/exec'; // Replace with your Apps Script URL
         const statusMessage = document.getElementById('statusMessage');
         
-        document.getElementById('generate-button').addEventListener('click', statusMessage.style.visibility = 'visible');
+        
         document.addEventListener("DOMContentLoaded", generateBingoCard);
+        document.getElementById('generate-button').addEventListener('click', statusMessage.style.visibility = 'visible');
         document.getElementById('generate-button').addEventListener('click', generateBingoCard);
         
         function generateBingoCard() {
