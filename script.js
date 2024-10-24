@@ -2,12 +2,8 @@ document.getElementById('generate-button').addEventListener('click', generateBin
 document.getElementById('reset-button').addEventListener('click', resetGame);
 
 function generateBingoCard() {
-    const input = document.getElementById('bingo-input').value;
+    const input = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
     const words = input.split(',').map(word => word.trim()).filter(word => word);
-    
-    if (words.length < 25) {
-        alert('Please enter at least 25 words.');
-        return;
     }
 
     const shuffledWords = shuffleArray(words).slice(0, 25);
