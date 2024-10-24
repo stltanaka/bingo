@@ -3,58 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Storage with GitHub Gist</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>User Input Storage</title>
 </head>
 <body>
-    <h1>Bitch Store Your Text</h1>
-    <textarea id="textInput" rows="10" cols="30"></textarea><br>
-    <button id="saveButton">Save Text</button>
-    <button id="loadButton">Load Text</button>
-    <pre id="output"></pre>
+    <h1>Input Storage</h1>
+    <textarea id="userInput" rows="4" cols="50" placeholder="Type something..."></textarea><br>
+    <button id="submitButton">Submit</button>
+    <div id="responseMessage"></div>
 
     <script>
-        const gistId = '5ffb823b67a9ddfa6d4fc669e23e16b3'; // Replace with your Gist ID
-        const accessToken = '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'; // Replace with your GitHub token (optional)
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const userInput = document.getElementById('userInput').value;
 
-        $('#saveButton').click(function() {
-            const text = $('#textInput').val();
-            const data = {
-                files: {
-                    'data.txt': {
-                        content: text
-                    }
-                }
-            };
-
-            $.ajax({
-                url: `https://api.github.com/gists/${gistId}`,
-                type: 'PATCH',
-                data: JSON.stringify(data),
-                contentType: 'application/json',
+            fetch('<https://script.google.com/macros/s/AKfycbxazl_2r50wL4qmw83YRz5Y-s_8pWaWFbLVjMQe3LxsD4GVTPbCVaEiNe73b9VoYy3FPQ/exec>', {
+                method: 'POST',
                 headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                success: function(response) {
-                    alert('Text saved!');
-                },
-                error: function(xhr) {
-                    console.error(xhr.responseText);
-                    alert('Error saving text: ' + xhr.status + ' ' + xhr.statusText);
-                }
-            });
-        });
-
-        $('#loadButton').click(function() {
-            $.ajax({
-                url: `https://api.github.com/gists/${gistId}`,
-                type: 'GET',
-                success: function(response) {
-                    const text = response.files['data.txt'].content;
-                    $('#output').text(text);
-                },
-                error: function() {
-                    alert('Error loading text.');
-                }
+                body: 'userInput=' + encodeURIComponent(userInput)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = 'Data saved successfully!';
+                document.getElementById('userInput').value = ''; // Clear input
+            })
+            .catch((error) => {
+                document.getElementById('responseMessage').innerText = 'Error saving data.';
+                console.error('Error:', error);
             });
         });
     </script>
