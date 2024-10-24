@@ -21,17 +21,9 @@ function generateBingoCard() {
             });
         })
         .catch(error => console.error('Error fetching data:', error))
-		.finally(() => {
-                document.getElementById('statusMessage').style.visibility = 'hidden';
+	.finally(() => {
+        	document.getElementById('statusMessage').style.visibility = 'hidden';
         });
-    
-    shuffledWords.forEach((word, index) => {
-        const cell = document.createElement('div');
-        cell.className = 'bingo-cell';
-        cell.textContent = word;
-        cell.addEventListener('click', () => cell.classList.toggle('checked'));
-        bingoBoard.appendChild(cell);
-    });
 }
 
 function shuffleArray(array) {
