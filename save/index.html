@@ -123,6 +123,15 @@
 	.statusMessage {
 	        visibility: hidden;
 	}
+	.containerboard {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+		.containermenu {
+		display: flex;
+		margin: auto;
+	}
     </style>
 </head>
 <body>
@@ -137,10 +146,17 @@
 	</div>
     </div>
     <div class="container">
-	<p class="generate-button" id="generate-button">Randomize Bingo Card</p>
-	<p class="generate-button" id="save-button">Save Bingo Board</p>
-	<div id="statusMessage">Please wait a moment</div>
-	<div id="bingo-board" class="bingo-board"></div>
+	<div class="containermenu">
+	    <p class="generate-button" id="generate-button">Randomize Bingo Card</p>
+	    <p class="generate-button" id="load-button">Load Saved Bingo Board</p>
+	    <p class="generate-button" id="save-button">Save Bingo Board</p>
+	</div>
+	<div class="containerboard">
+	    <div id="statusMessage">Please wait a moment</div>
+	</div>
+	<div class="containerboard">
+	    <div id="bingo-board" class="bingo-board"></div>
+	</div>
     </div>
 
     <script>
