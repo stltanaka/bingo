@@ -24,6 +24,26 @@
         const FILE_PATH = 'text.txt'; // Name of the file to save text in
         const TOKEN = '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'; // Replace with your personal access token
 
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${TOKEN}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: 'Update text file',
+                content: btoa(text),
+                sha: await getFileSha(),
+            }),
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Error:', errorData);
+            statusMessage.innerText = `Error: ${errorData.message}`;
+        }
+
+
         // Save text to GitHub
         saveTextButton.addEventListener('click', async () => {
             const text = document.getElementById('textInput').value;
