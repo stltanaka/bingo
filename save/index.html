@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/jbl4ppd.css">
-    <title>Bitch Bingo</title>
+    <title>Bingo</title>
     <style>
 	body {
 		font-family: 'cooper-black-std', serif;
@@ -179,29 +179,29 @@
 	    }
 	    return array;
 	}
+
 	function saveBingoBoard() {
 	    const bingoCells = document.querySelectorAll('.bingo-cell');
 	    const boardState = Array.from(bingoCells).map(cell => ({
 	        word: cell.textContent,
 	        checked: cell.classList.contains('checked')
 	    }));
-	    
-	    fetch(scriptURL, {
-	        method: 'POST',
-	        headers: {
-	            'Content-Type': 'application/json',
-		    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'POST',
-                    'Access-Control-Allow-Headers': 'Content-Type'
-	        },
-	        body: JSON.stringify(boardState)
-	    })
-	    .then(response => response.text())
-	    .then(message => {
-	        alert(message); // Show a message when data is saved
-	    })
-	    .catch(error => console.error('Error saving data:', error));
+	
+	    // Construct the query string
+	    const words = boardState.map(item => encodeURIComponent(item.word)).join(',');
+	    const statuses = boardState.map(item => item.checked).join(',');
+	
+	    const url = `${scriptURL}?words=${words}&statuses=${statuses}`;
+	
+	    fetch(url)
+	        .then(response => response.text())
+	        .then(message => {
+	            alert(message); // Show a message when data is saved
+	        })
+	        .catch(error => console.error('Error saving data:', error));
 	}
+
+	
     </script>
 </body>
 </html>
