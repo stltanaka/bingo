@@ -1,4 +1,4 @@
-generateBingoCard
+document.addEventListener("DOMContentLoaded", generateBingoCard);
 document.getElementById('generate-button').addEventListener('click', generateBingoCard);
 
 function generateBingoCard() {
