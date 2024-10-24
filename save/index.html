@@ -58,10 +58,10 @@
         
         
         document.addEventListener("DOMContentLoaded", generateBingoCard);
-        document.getElementById('generate-button').addEventListener('click', statusMessage.style.visibility = 'visible');
         document.getElementById('generate-button').addEventListener('click', generateBingoCard);
         
         function generateBingoCard() {
+            statusMessage.style.visibility = 'visible'
             fetch(scriptURL)
                 .then(response => response.json())
                 .then(words => {
@@ -78,7 +78,9 @@
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));
-            statusMessage.style.visibility = 'hidden'
+		.finally(() => {
+                    statusMessage.style.visibility = 'hidden';
+                });
         }
 
         function shuffleArray(array) {
