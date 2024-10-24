@@ -33,7 +33,6 @@
                 data: JSON.stringify(data),
                 contentType: 'application/json',
                 headers: {
-                    'Authorization': 'token ' + accessToken // Optional: for higher rate limits
                 },
                 success: function(response) {
                     alert('Text saved!');
