@@ -264,6 +264,5 @@ p {
 .bingo-cell.checked {
 	background-color: #700000;
 	color: white;
-	text-decoration: line-through;
 }
 
