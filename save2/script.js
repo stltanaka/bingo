@@ -1,23 +1,45 @@
 // Example: AWS Lambda function
-exports.handler = async (event) => {
-    // Generate a simple session token (e.g., a random string)
-    const sessionToken = Math.random().toString(36).substring(2, 15);
+const AWS = require('aws-sdk');
+const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
-    // You could store session data in memory or a database, but here we just return it
+exports.handler = async (event) => {
+    if (event.httpMethod === 'POST') {
+        const body = JSON.parse(event.body);
+        const { text } = body;
+
+        // Save the text to DynamoDB
+        const params = {
+            TableName: 'TextStorage', // Make sure this table exists
+            Item: {
+                id: 'unique-text-id', // Use a unique identifier
+                text: text,
+            },
+        };
+
+        await dynamoDB.put(params).promise();
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Text saved successfully!' }),
+        };
+    } else if (event.httpMethod === 'GET') {
+        // Retrieve the text
+        const params = {
+            TableName: 'TextStorage',
+            Key: {
+                id: 'unique-text-id',
+            },
+        };
+
+        const result = await dynamoDB.get(params).promise();
+        return {
+            statusCode: 200,
+            body: JSON.stringify(result.Item),
+        };
+    }
+
     return {
-        statusCode: 200,
-        body: JSON.stringify({ sessionToken }),
+        statusCode: 400,
+        body: JSON.stringify({ message: 'Invalid request' }),
     };
 };
-
-async function fetchData() {
-    const response = await fetch('YOUR_API_ENDPOINT', {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${window.sessionToken}`, // Using the session token
-        },
-    });
-
-    const data = await response.json();
-    console.log(data);
-}
