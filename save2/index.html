@@ -38,8 +38,9 @@
                 success: function(response) {
                     alert('Text saved!');
                 },
-                error: function() {
-                    alert('Error saving text.');
+                error: function(xhr) {
+                    console.error(xhr.responseText);
+                    alert('Error saving text: ' + xhr.status + ' ' + xhr.statusText);
                 }
             });
         });
