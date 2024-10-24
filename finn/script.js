@@ -26,3 +26,30 @@ function shuffleArray(array) {
     return array;
 }
 
+function setUserstate(userstate) {
+    fetch('/set_userstate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ userstate })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message); // Confirmation message
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function getUserstate() {
+    fetch('/get_userstate')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Username:', data.userstate);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
