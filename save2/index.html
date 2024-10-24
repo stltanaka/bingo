@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitch User Session Storage</title>
+    <title>User Session Storage</title>
 </head>
 <body>
-    <textarea id="userText" rows="10" cols="30"></textarea><br>
-    <button onclick="saveText()">Save</button>
-    <button onclick="loadText()">Load</button>
+    <h1>Store and Load Text</h1>
+    <textarea id="userInput" rows="10" cols="30"></textarea>
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+    <div id="output"></div>
 
     <script>
-        const sessionId = Date.now(); // Generate a unique session ID based on timestamp
-        const baseUrl = 'https://script.google.com/macros/s/AKfycbxazl_2r50wL4qmw83YRz5Y-s_8pWaWFbLVjMQe3LxsD4GVTPbCVaEiNe73b9VoYy3FPQ/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxazl_2r50wL4qmw83YRz5Y-s_8pWaWFbLVjMQe3LxsD4GVTPbCVaEiNe73b9VoYy3FPQ/exec'; // Replace with your Apps Script URL
 
-        async function saveText() {
-            const userText = document.getElementById('userText').value;
-            await fetch(`${baseUrl}/saveData?sessionId=${sessionId}&userText=${encodeURIComponent(userText)}`, {
-                method: 'POST'
-            });
-            alert('Text saved!');
+        function saveData() {
+            const text = document.getElementById('userInput').value;
+            fetch(scriptURL + '?text=' + encodeURIComponent(text))
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
         }
 
-        async function loadText() {
-            const response = await fetch(`${baseUrl}/getData?sessionId=${sessionId}`);
-            const userText = await response.text();
-            document.getElementById('userText').value = userText;
+        function loadData() {
+            fetch(scriptURL)
+                .then(response => response.json())
+                .then(data => {
+                    const output = document.getElementById('output');
+                    output.innerHTML = data.join('<br>');
+                })
+                .catch(error => console.error('Error:', error));
         }
     </script>
 </body>
