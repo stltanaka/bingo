@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bingo Card Generator</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jbl4ppd.css">
+    <title>Bingo</title>
     <style>
 	body {
 		font-family: 'cooper-black-std', serif;
@@ -125,10 +126,21 @@
     </style>
 </head>
 <body>
-    <h1>Bitch Bingo Card</h1>
-    <div id="bingo-board"></div>
-    <button id="generate-button">Generate Bingo Card</button>
-    <div id="statusMessage">Please wait a moment</div>
+    <div>
+	<div class="topcontainer">
+            <div class=bubble1></div>
+	    <p class="stroke4">Bitch I Made You This Bingo</p>
+	    <p class="stroke3">Bitch I Made You This Bingo</p>
+            <p class="stroke2">Bitch I Made You This Bingo</p>
+            <p class="stroke1">Bitch I Made You This Bingo</p>
+            <p class="basetext">Bitch I Made You This Bingo</p>
+	</div>
+    </div>
+    <div class="container">
+	<p class="generate-button" id="generate-button">Randomize Bingo Card</p>
+	<div id="statusMessage">Please wait a moment</div>
+	<div id="bingo-board" class="bingo-board"></div>
+    </div>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUkX5xmJHLwuPUaiQpgOzuQ9oSTkaTGdYuCQRlz08YzLFAo6UZsN0Ii3S_oQbG16qkg/exec'; // Replace with your Apps Script URL
