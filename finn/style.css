@@ -270,3 +270,12 @@ p {
 	color: #af4b6c;
 }
 
+.generate-button {
+	background-color: #af4b9e;
+	border-radius: 1vw;
+	cursor: pointer;
+	font-size: 2vw;
+  	margin: 0.5vw;
+	color: #007;
+}
+
