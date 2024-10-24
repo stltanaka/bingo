@@ -274,7 +274,8 @@ p {
 	background-color: #af4b9e;
 	border-radius: 1vw;
 	cursor: pointer;
-	font-size: 2vw;
+	font-size: 0.5vw;
+	width: 10vw;
   	margin: 0.5vw;
 	color: #007;
 }
